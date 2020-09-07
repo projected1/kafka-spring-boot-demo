@@ -70,3 +70,15 @@ A Spring Boot Kafka demo.
     ```bash
     $ docker exec -it <kafka_container_id> kafka-topics.sh --zookeeper zookeeper-server:2181 --topic example --delete
     ```
+
+## Kafka Consumer Group
+
+![Kafka Consumer Group](/images/kafka_consumer_group.png)
+
+Kafka consumer group is a number of Kafka consumers who can read data in parallel from a Kafka topic. A Kafka consumer group has the following properties:
+
+* All the consumers in a one group, have the same group id.
+* Each partition in a topic can be read by only one group consumer.
+* One group consumer can read from multiple topic partitions.
+* A partition in a topic can be read by several consumers from different groups.
+* If there are more consumers than partitions, then some of the consumers remain idle.
